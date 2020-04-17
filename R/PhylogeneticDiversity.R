@@ -12,7 +12,7 @@ require(V.PhyloMaker) #this creates the megaphylogeny (and is faster than the ol
 library(picante) #measures phylogenetic diversity
 
 ###read in plot level data of individual tree species for 10 NEON sites
-rawdat <- read.csv("./master.Chrissites.csv")
+rawdat <- read.csv("./inst/extdata/master.Chrissites.csv")
 
 ###Compile a species list to generate a phylogeny
 species.list <- as.data.frame(unique(rawdat$taxonid)) #unique species
@@ -54,7 +54,7 @@ head(OUT)
 #------------------------------------------------------------------------------
 #------------------------------------------------------------------------------
 #Create a phylogeny and then extract 3 common but different phylogenetic diversity metrics
-treesp <- read.csv("./phylogeneticlist.csv")
+treesp <- read.csv("./inst/extdata/phylogeneticlist.csv")
 treesp <- treesp[,-1] #remove USDA codes
 
 #make the phylogeny
@@ -63,7 +63,7 @@ plot.phylo(treephylo$scenario.3, cex = .3) #can see your phylogeny
 treephylo$scenario.3
 
 #download community data of native and exotic plants species for neon plots ----------------------------------------------------
-community <- read.csv("./ChrisCommunityMatrix.csv", stringsAsFactors = FALSE, header = TRUE)
+community <- read.csv("./inst/extdata/ChrisCommunityMatrix.csv", stringsAsFactors = FALSE, header = TRUE)
 rownames(community) <- community[,1]
 community <- community[,-1]
 community <- data.matrix(community, rownames.force = TRUE)
