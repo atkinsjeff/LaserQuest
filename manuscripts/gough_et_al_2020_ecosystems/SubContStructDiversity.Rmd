@@ -1,0 +1,168 @@
+---
+title: "Subcontinental Structural Diversity"
+author: "Gough et al."
+date: "4/30/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(kableExtra)
+#source("./R/utilities.R")
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+
+```{r data.import}
+df <- read.csv("./data/forte_resistance_data_yr_one.csv")
+
+# change severity from integer to factor
+df$severity <-as.factor(df$severity)
+```
+
+### Question One: Do key carbon cycling processes respond similarly to disturbance?
+
+```{r question.one}
+df %>%
+  select(rep, severity, type, rNPP, rRs, rAmax) %>%
+  pivot_longer(cols = c(rNPP, rRs, rAmax),
+               values_to = "resistance") -> df.resist
+
+
+# GLM model
+# original SAS code:
+# proc sort; by funct; run;
+# proc glm;
+# class rep sev trt funct;
+# model R = rep sev trt;
+# means sev/lsd alpha = 0.1; by funct;
+# run;
+
+resist.model <- lm(resistance ~ rep + severity + type, data = df.resist)
+summary(resist.model)
+
+```
+## Q2: Does carbon cycling process resistance change as a function of disturbance severity and canopy strata affected?
+
+## Q3: Do pre-disturbance canopy structural complexity and LAI affect carbon cycling process resistances?
+```{r samp.var}
+
+# Let's look at means of variables
+df %>%
+  select(-type) %>%
+  group_by(rep, severity) %>%
+  dplyr::summarize_all(list(~mean(.), ~var(.))) -> df.means.var
+
+knitr::kable(df.means.var[,c(1:2, 3:10)], caption = "Variable means for year 2019") %>%
+  kable_styling() 
+
+knitr::kable(df.means.var[,c(1:2, 11:18)], caption = "Variable variance for year 2019") %>%
+  kable_styling() 
+  
+```
+
+Next...Testing LAI and resistance
+
+```{r rugosity}
+# sas code:  
+# proc glm data=resist2;
+# class severity;
+# model rNPP rRs rAmax = rugosity rugosity*severity;
+# run;
+
+# R version of the SAS GLM 
+
+# NPP resistance
+lm.rNPP <- lm(rNPP ~ rugosity + rugosity*severity, data = df)
+summary(lm.rNPP)
+
+# Soil Respiration (Rs) resistance
+lm.rRs <- lm(rRs ~ rugosity + rugosity*severity, data = df)
+summary(lm.rRs)
+
+# Amax resistance
+lm.rAmax <- lm(rAmax ~ rugosity + rugosity*severity, data = df)
+summary(lm.rAmax)
+```
+
+Next...Testing structural (rugosity) and resistance
+
+```{r LAI}
+# sas code:  
+# proc glm;
+# class severity;
+# model rNPP rRs rAmax = LAI LAI*severity;
+# run;
+
+
+# R version of the SAS GLM 
+
+# NPP resistance
+lm.rNPP.LAI <- lm(rNPP ~ LAI + LAI*severity, data = df)
+summary(lm.rNPP.LAI)
+
+# Soil Respiration (Rs) resistance
+lm.rRs.LAI <- lm(rRs ~ LAI + LAI*severity, data = df)
+summary(lm.rRs.LAI)
+
+# Amax resistance
+lm.rAmax.LAI <- lm(rAmax ~ LAI + LAI*severity, data = df)
+summary(lm.rAmax.LAI)
+```
+
+
+
+```{r biomass}
+# sas code:  
+# proc glm;
+# class severity;
+# model rNPP rRs rAmax = biomass biomass*severity;
+# run;
+
+
+# R version of the SAS GLM 
+
+# NPP resistance
+lm.rNPP.biomass <- lm(rNPP ~ biomass + biomass*severity, data = df)
+summary(lm.rNPP.biomass)
+
+# Soil Respiration (Rs) resistance
+lm.rRs.biomass <- lm(rRs ~ biomass + biomass*severity, data = df)
+summary(lm.rRs.biomass)
+
+# Amax resistance
+lm.rAmax.biomass <- lm(rAmax ~ biomass + biomass*severity, data = df)
+summary(lm.rAmax.biomass)
+```
+
+
+```{r shannon}
+# sas code:  
+# proc glm;
+# class severity;
+# model rNPP rRs rAmax = shannon shannon*severity;
+# run;
+
+
+message("Testing")
+# R version of the SAS GLM 
+
+# NPP resistance
+lm.rNPP.shannon <- lm(rNPP ~ shannon + shannon*severity, data = df)
+summary(lm.rNPP.shannon)
+
+# Soil Respiration (Rs) resistance
+lm.rRs.shannon <- lm(rRs ~ shannon + shannon*severity, data = df)
+summary(lm.rRs.shannon)
+
+# Amax resistance
+lm.rAmax.shannon <- lm(rAmax ~ shannon + shannon*severity, data = df)
+summary(lm.rAmax.shannon)
+```
+
