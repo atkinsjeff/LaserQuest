@@ -39,7 +39,7 @@ With in this folder `PhylogeneticDiversity.R` recreates the associated analysis 
 
 The original release of this project can be found at https://github.com/atkinsjeff/LaserQuest/releases/tag/0.1.1 
 
-![DOI](https://zenodo.org/badge/256582771.svg)](https://zenodo.org/badge/latestdoi/256582771)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3755983.svg)](https://doi.org/10.5281/zenodo.3755983)
 
 
 Authors: Christopher M. Gough (VCU), Jeff W. Atkin (VCU), Robert T. Fahey (UConn), Brady S. Hardiman (Purdue), Elizabeth A. LaRue (Purdue)
