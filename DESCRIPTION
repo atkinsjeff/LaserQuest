@@ -1,11 +1,13 @@
 Package: laserquest
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Title: A composite manuscript, data, and analysis package for all laserquest projects
+Version: 1.1.0
+Author: person("Jeff", "Atkins", email = "jwatkins6@vcu.edu", role = c("aut", "cre"))
+Description: This package documents all laserquest related manuscripts, data, and analysis
+License: CC BY 4.0
+Suggests:
+  knitr,
+  tidyverse,
+  ggplot2
 Encoding: UTF-8
 LazyData: true
