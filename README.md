@@ -19,6 +19,8 @@ Code and data for this paper are availble (scripts included are in both R and SA
 
 `/manuscripts/gough_et_al_2020_ecosystems`
 
+[![DOI](https://zenodo.org/badge/256582771.svg)](https://zenodo.org/badge/latestdoi/256582771)
+
 
 This paper is part of the [Forest Resilience Threshold Experiment](https://github.com/FoRTExperiment/fortedata).  
 
