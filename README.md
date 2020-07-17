@@ -10,10 +10,26 @@ The general structure of this repo is that all data, code, and text for each man
 
 ### Included Manuscripts and Projects
 
-#### Diversity, structure and complexity as predictors of carbon cycling resistance to disturbance
+## Forest structural complexity and biomass predict first-year carbon cycling responses to disturbance
+
 *This paper is currently in review*
 
-The pre-disturbance vegetation characteristics that confer carbon (C) cycling resistance to disturbance are not well known. To address this gap, we initiated the Forest Resilience Threshold Experiment (FoRTE), a manipulative study comprised of factorial combinations of four levels of (control, 45%, 65% and 85% gross defoliation) disturbance severity and two disturbance types (targeting upper or lower canopy strata) replicated within four landscape ecosystem types. Applying a standardized stability framework, we investigated to what extent pre-disturbance levels of species diversity, aboveground woody biomass, leaf area index, and canopy rugosity – a measure of structural complexity – predict initial responses (i.e., resistance) of subcanopy light-saturated leaf CO2 assimilation (Asat), aboveground wood NPP (ANPPw) and soil respiration (Rs) to disturbance. Calculating resistance as the first-year natural log response ratio of disturbance and control treatments, we found that above-ground C cycling processes, Asat and ANPPw, were resistant to increases in disturbance severity, while Rs resistance declined as severity increased. Disturbance type had no effect on resistance. Pre-disturbance aboveground woody biomass was a positive predictor of ANPPw resistance and, along with canopy rugosity, was related negatively to Rs resistance. Subcanopy Asat resistance was not consistently dependent upon pre-disturbance ecosystem properties. Stability of C uptake processes along with Rs declines suggest the net C balance was sustained in the initial months following disturbance. We conclude that biomass and complexity are significant, but not universal, predictors of C cycling resistance to disturbance. Our findings also highlight the utility of standardized stability measures when comparing functional responses to disturbance.
+Authors:  Christopher M. Gough^1^, Jeff W. Atkins^1^, Ben Bond-Lamberty^2^, Elizabeth A. Agee^3^, Kalyn R. Dorheim^2^ Robert T. Fahey^4^, Maxim S. Grigri^1^, Lisa T. Haber^1^, Kayla C. Mathes^1^, Stephanie C. Pennington^2^, Alexey N. Shiklomanov^5^, Jason M. Tallant^6^ 
+
+1. Department of Biology, Virginia Commonwealth University, Box 842012, 1000 West Cary St., Richmond, VA 23284
+2. Joint Global Change Research Institute, Pacific Northwest National Laboratory, 5825 University Research Ct, College Park, MD 20740
+3. Environmental Sciences Division and Climate Change Science Institute, Oak Ridge National Laboratory, Oak Ridge, TN, 37831, USA
+4. Department of Natural Resources and the Environment & Center for Environmental Sciences and Engineering, University of Connecticut, 1376 Storrs Road, Storrs, CT 06269
+5. NASA Goddard Space Flight Center, Greenbelt, MD 20771, USA
+6. University of Michigan, Biological Station and Department of Ecology and Evolutionary Biology, Pellston, MI 49769, USA
+
+*Corresponding Author: <cmgough@vcu.edu>
+Submitted to: Ecosystems <https://www.springer.com/journal/10021>
+
+
+### Abstract
+
+The pre-disturbance vegetation characteristics that confer initial carbon (C) cycling resistance to disturbance are not well known. To address this gap, we initiated the Forest Resilience Threshold Experiment (FoRTE), a manipulative study comprised of replicated factorial combinations of four levels (control, 45%, 65% and 85% gross defoliation) of disturbance severity and two disturbance types (targeting upper or lower canopy strata) implemented by stem girdling >3600 trees. Applying a standardized stability framework in which resistance was calculated as the first-year natural log response ratio of disturbance and control treatments, we investigated to what extent pre-disturbance levels of species diversity, aboveground woody biomass, leaf area index, and canopy rugosity – a measure of structural complexity – predict the initial resistance of subcanopy light-saturated leaf CO~2~ assimilation (A~sat~), aboveground wood NPP (ANPP~w~) and soil respiration (R~s~) to phloem-disrupting disturbance. We found that above-ground C cycling processes, A~sat~ and ANPP~w~, were highly resistant to increases in disturbance severity, while Rs resistance declined as severity increased. Disturbance type had no effect on first-year resistance. Pre-disturbance aboveground woody biomass was a positive predictor of ANPP~w~ resistance and, along with canopy rugosity, was negatively related to R~s~ resistance. Subcanopy A~sat~ resistance was not related to pre-disturbance vegetation characteristics. Stability of C uptake processes along with Rs declines suggest the net C sink was sustained in the initial months following disturbance. We conclude that biomass and complexity are significant, but not universal, predictors of initial C cycling resistance to disturbance. Our findings highlight the utility of standardized stability measures when comparing functional responses to disturbance.
 
 Code and data for this paper are availble (scripts included are in both R and SAS):
 
