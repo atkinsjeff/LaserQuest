@@ -12,7 +12,7 @@
 <meta name="author" content="Gough et al." />
 
 
-<title>Subcontinental Structural Diversity</title>
+<title>Analyses and Background Information in support of the manucript: Forest structural complexity and biomass predict first-year carbon cycling responses to disturbance, Gough et al. </title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -384,21 +384,38 @@ summary {
 
 
 
-<h1 class="title toc-ignore">Subcontinental Structural Diversity</h1>
+<h1 class="title toc-ignore">Analyses and Background Information in support of the manucript: Forest structural complexity and biomass predict first-year carbon cycling responses to disturbance, Gough et al. </h1>
 <h4 class="author">Gough et al.</h4>
 <h4 class="date">4/30/2020</h4>
 
 </div>
 
 
-<div id="r-markdown" class="section level2">
-<h2>R Markdown</h2>
-<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<p>This document accompanies the manuscript, “Forest structural complexity and biomass predict first-year carbon cycling responses to disturbance” by Gough et al. submitted to Ecosystems in 2020. This analysis focuses on first year carbon cycling responses from the Forest Resilience and Threshold Experiment (FoRTE): <a href="https://fortexperiment.github.io/fortedata/" class="uri">https://fortexperiment.github.io/fortedata/</a>.</p>
+<p>Additional analyses scripts written for SAS are availble in this download.</p>
+</div>
+<div id="forest-structural-complexity-and-biomass-predict-first-year-carbon-cycling-responses-to-disturbance" class="section level2">
+<h2>Forest structural complexity and biomass predict first-year carbon cycling responses to disturbance</h2>
+<p>Authors: Christopher M. Gough<sup>1</sup>, Jeff W. Atkins<sup>1</sup>, Ben Bond-Lamberty<sup>2</sup>, Elizabeth A. Agee<sup>3</sup>, Kalyn R. Dorheim<sup>2</sup> Robert T. Fahey<sup>4</sup>, Maxim S. Grigri<sup>1</sup>, Lisa T. Haber<sup>1</sup>, Kayla C. Mathes<sup>1</sup>, Stephanie C. Pennington<sup>2</sup>, Alexey N. Shiklomanov<sup>5</sup>, Jason M. Tallant<sup>6</sup></p>
+<ol style="list-style-type: decimal">
+<li>Department of Biology, Virginia Commonwealth University, Box 842012, 1000 West Cary St., Richmond, VA 23284</li>
+<li>Joint Global Change Research Institute, Pacific Northwest National Laboratory, 5825 University Research Ct, College Park, MD 20740</li>
+<li>Environmental Sciences Division and Climate Change Science Institute, Oak Ridge National Laboratory, Oak Ridge, TN, 37831, USA</li>
+<li>Department of Natural Resources and the Environment &amp; Center for Environmental Sciences and Engineering, University of Connecticut, 1376 Storrs Road, Storrs, CT 06269</li>
+<li>NASA Goddard Space Flight Center, Greenbelt, MD 20771, USA</li>
+<li>University of Michigan, Biological Station and Department of Ecology and Evolutionary Biology, Pellston, MI 49769, USA</li>
+</ol>
+<p>*Corresponding Author: <a href="mailto:cmgough@vcu.edu" class="email">cmgough@vcu.edu</a> Submitted to: Ecosystems <a href="https://www.springer.com/journal/10021" class="uri">https://www.springer.com/journal/10021</a></p>
+<div id="abstract" class="section level3">
+<h3>Abstract</h3>
+<p>The pre-disturbance vegetation characteristics that confer initial carbon (C) cycling resistance to disturbance are not well known. To address this gap, we initiated the Forest Resilience Threshold Experiment (FoRTE), a manipulative study comprised of replicated factorial combinations of four levels (control, 45%, 65% and 85% gross defoliation) of disturbance severity and two disturbance types (targeting upper or lower canopy strata) implemented by stem girdling &gt;3600 trees. Applying a standardized stability framework in which resistance was calculated as the first-year natural log response ratio of disturbance and control treatments, we investigated to what extent pre-disturbance levels of species diversity, aboveground woody biomass, leaf area index, and canopy rugosity – a measure of structural complexity – predict the initial resistance of subcanopy light-saturated leaf CO<sub>2</sub> assimilation (A<sub>sat</sub>), aboveground wood NPP (ANPP<sub>w</sub>) and soil respiration (R<sub>s</sub>) to phloem-disrupting disturbance. We found that above-ground C cycling processes, Asat and ANPPw, were highly resistant to increases in disturbance severity, while Rs resistance declined as severity increased. Disturbance type had no effect on first-year resistance. Pre-disturbance aboveground woody biomass was a positive predictor of ANPP<sub>w</sub> resistance and, along with canopy rugosity, was negatively related to R<sub>s</sub> resistance. Subcanopy Asat resistance was not related to pre-disturbance vegetation characteristics. Stability of C uptake processes along with Rs declines suggest the net C sink was sustained in the initial months following disturbance. We conclude that biomass and complexity are significant, but not universal, predictors of initial C cycling resistance to disturbance. Our findings highlight the utility of standardized stability measures when comparing functional responses to disturbance.</p>
 <pre class="r"><code>df &lt;- read.csv(&quot;./data/forte_resistance_data_yr_one.csv&quot;)
 
 # change severity from integer to factor
 df$severity &lt;-as.factor(df$severity)</code></pre>
+</div>
 <div id="question-one-do-key-carbon-cycling-processes-respond-similarly-to-disturbance" class="section level3">
 <h3>Question One: Do key carbon cycling processes respond similarly to disturbance?</h3>
 <pre class="r"><code>df %&gt;%
@@ -772,7 +789,7 @@ C
 1.4889957
 </td>
 <td style="text-align:right;">
-0.0203022
+0.0203023
 </td>
 <td style="text-align:right;">
 -0.2175816
